@@ -42,6 +42,8 @@ UITableViewDataSource
 	self.view.backgroundColor = [UIColor whiteColor];
 	
 	[self addCellTitle:@"空TableView样式" skipViewController:@"EmptyTableViewController"];
+	[self addCellTitle:@"日历" skipViewController:@"PDTCalendarViewController"];
+	[self addCellTitle:@"SideEdgeViewController" skipViewController:@"SideEdgeViewController"];
 	
 	[self.view addSubview:self.tableView];
 }

@@ -6,6 +6,8 @@ target 'ExcellentUIKit' do
 pod 'DZNEmptyDataSet'
 pod 'PDTSimpleCalendar'
 pod 'MagicalRecord'
+pod 'iRate'
+pod 'PKRevealController'
 
 
 end

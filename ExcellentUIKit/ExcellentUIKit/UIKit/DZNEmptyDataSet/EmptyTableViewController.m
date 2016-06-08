@@ -52,35 +52,36 @@ DZNEmptyDataSetDelegate
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
-	return [UIImage imageNamed:@"fileicon_xls90"];
+	return [UIImage imageNamed:@"emptyTableView_drawer"];
 }
 
 
 - (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
 {
+	NSLog(@"麻痹的");
+	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath: @"transform"];
 	
-	CABasicAnimation *anim2 = [CABasicAnimation animationWithKeyPath:@"cornerRadius"];
-	anim2.duration = 1.f;
-	anim2.fromValue = [NSNumber numberWithFloat:0.f];
-	anim2.toValue = [NSNumber numberWithFloat:20.f];
-	anim2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-	anim2.repeatCount = CGFLOAT_MAX;
-	anim2.autoreverses = YES;
+	animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+	animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0)];
 	
-	return anim2;
+	animation.duration = 0.25;
+	animation.cumulative = YES;
+	animation.repeatCount = MAXFLOAT;
+	
+	return animation;
 }
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
-	NSString *text = @"添加更多好友";
+	NSString *text = @"Instagram Direct";
 	
-	NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0f],
+	NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:20.0f],
 								 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
 	
 	return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
-	NSString *text = @"This allows you to share photos from your library and save photos to your camera roll.";
+	NSString *text = @"Send Photos and videos directly to your friends Only the people you send to can see these posts.";
 	
 	NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
 	paragraph.lineBreakMode = NSLineBreakByWordWrapping;

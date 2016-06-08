@@ -14,6 +14,8 @@
 		6C3627A31D017F59002E31BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3627A21D017F59002E31BF /* Assets.xcassets */; };
 		6C3627A61D017F59002E31BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3627A41D017F59002E31BF /* LaunchScreen.storyboard */; };
 		6C3627B11D01811B002E31BF /* EmptyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3627B01D01811B002E31BF /* EmptyTableViewController.m */; };
+		6C96D4F31D06C330006E2E8C /* PDTCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C96D4F21D06C330006E2E8C /* PDTCalendarViewController.m */; };
+		6CF8F5AE1D08151F0038FA83 /* SideEdgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8F5AD1D08151F0038FA83 /* SideEdgeViewController.m */; };
 		B7D37AA5D657449B9E0C2309 /* Pods_ExcellentUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B48EDF0463A2262228357 /* Pods_ExcellentUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		6C3627A71D017F59002E31BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C3627AF1D01811B002E31BF /* EmptyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyTableViewController.h; sourceTree = "<group>"; };
 		6C3627B01D01811B002E31BF /* EmptyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyTableViewController.m; sourceTree = "<group>"; };
+		6C96D4F11D06C330006E2E8C /* PDTCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTCalendarViewController.h; sourceTree = "<group>"; };
+		6C96D4F21D06C330006E2E8C /* PDTCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTCalendarViewController.m; sourceTree = "<group>"; };
+		6CF8F5AC1D08151F0038FA83 /* SideEdgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideEdgeViewController.h; sourceTree = "<group>"; };
+		6CF8F5AD1D08151F0038FA83 /* SideEdgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideEdgeViewController.m; sourceTree = "<group>"; };
 		B07B48EDF0463A2262228357 /* Pods_ExcellentUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExcellentUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9D4484A26E9703B90035B /* Pods-ExcellentUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExcellentUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExcellentUIKit/Pods-ExcellentUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +99,8 @@
 		6C3627AD1D01811B002E31BF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6CF8F5A91D0814680038FA83 /* PKRevealController */,
+				6C96D4F01D06C315006E2E8C /* PDTSimpleCalendar */,
 				6C3627AE1D01811B002E31BF /* DZNEmptyDataSet */,
 			);
 			path = UIKit;
@@ -105,6 +113,24 @@
 				6C3627B01D01811B002E31BF /* EmptyTableViewController.m */,
 			);
 			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		6C96D4F01D06C315006E2E8C /* PDTSimpleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				6C96D4F11D06C330006E2E8C /* PDTCalendarViewController.h */,
+				6C96D4F21D06C330006E2E8C /* PDTCalendarViewController.m */,
+			);
+			path = PDTSimpleCalendar;
+			sourceTree = "<group>";
+		};
+		6CF8F5A91D0814680038FA83 /* PKRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				6CF8F5AC1D08151F0038FA83 /* SideEdgeViewController.h */,
+				6CF8F5AD1D08151F0038FA83 /* SideEdgeViewController.m */,
+			);
+			path = PKRevealController;
 			sourceTree = "<group>";
 		};
 		7F534D951FB853565FA36F65 /* Pods */ = {
@@ -249,6 +275,8 @@
 				6C36279B1D017F59002E31BF /* AppDelegate.m in Sources */,
 				6C3627981D017F59002E31BF /* main.m in Sources */,
 				6C3627B11D01811B002E31BF /* EmptyTableViewController.m in Sources */,
+				6CF8F5AE1D08151F0038FA83 /* SideEdgeViewController.m in Sources */,
+				6C96D4F31D06C330006E2E8C /* PDTCalendarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,10 +389,15 @@
 			baseConfigurationReference = 3361D71B7811E210B2C049DF /* Pods-ExcellentUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = ExcellentUIKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.queuey.ExcellentUIKit;
+				PRODUCT_MODULE_NAME = ExcellentUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExcellentUIKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -373,10 +406,14 @@
 			baseConfigurationReference = F0A9D4484A26E9703B90035B /* Pods-ExcellentUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = ExcellentUIKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.queuey.ExcellentUIKit;
+				PRODUCT_MODULE_NAME = ExcellentUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExcellentUIKit-Bridging-Header.h";
 			};
 			name = Release;
 		};

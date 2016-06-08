@@ -87,9 +87,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/MagicalRecord/MagicalRecord.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/PDTSimpleCalendar/PDTSimpleCalendar.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/PKRevealController/PKRevealController.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/iRate/iRate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/MagicalRecord/MagicalRecord.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/PDTSimpleCalendar/PDTSimpleCalendar.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/PKRevealController/PKRevealController.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/iRate/iRate.framework"
 fi
